@@ -1,0 +1,32 @@
+# binarios e intermediarios de build: vao como release, nao no historico
+build/
+build-win/
+bin/
+bin-win/
+*.o
+*.d
+*.so
+*.dll
+*.exe
+*.vst3/
+*.clap
+*.lv2/
+
+# a landing page do site vive no repositorio do site, nao aqui
+landing/
+
+# pacotes: entram como asset de release
+*.tar.gz
+*.zip
+
+# lixo de sistema
+.DS_Store
+*~
+*.swp
+__pycache__/
+docs/_antigo/
+
+# binarios compilados dos testes
+tests/lamptest
+tests/tptest
+tests/vutest2
