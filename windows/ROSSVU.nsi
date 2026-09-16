@@ -3,9 +3,9 @@
 ; No Fedora:     sudo dnf install mingw64-nsis
 
 !define NOME    "ROSS VU"
-!define VERSAO  "1.4.0"
+!define VERSAO  "1.4.1"
 !define AUTOR   "Mister RickRoss"
-!define SITE    "https://chaosarchitect.art"
+!define SITE    "https://misterrickross.com/plugins/ross-vu/"
 
 Name "${NOME} ${VERSAO}"
 OutFile "ROSS-VU-${VERSAO}-windows-x64-setup.exe"
@@ -16,7 +16,7 @@ RequestExecutionLevel admin
 InstallDir "$PROGRAMFILES64\Common Files\VST3"
 ShowInstDetails show
 
-VIProductVersion "1.4.0.0"
+VIProductVersion "1.4.1.0"
 VIAddVersionKey "ProductName"     "${NOME}"
 VIAddVersionKey "FileDescription" "Medidor VU analogico com balistica normativa"
 VIAddVersionKey "FileVersion"     "${VERSAO}"

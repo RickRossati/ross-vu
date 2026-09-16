@@ -127,6 +127,13 @@ e `~/.lv2`, e deixa o standalone em `../bin/ROSSVU`.
 No REAPER, depois de instalar: Options > Preferences > Plug-ins > VST >
 Re-scan. O CLAP em `~/.clap` é varrido junto.
 
+**Build de release para Linux é outro comando.** O `make` liga o binário na
+glibc da máquina onde compila: feito aqui no Fedora 44, ele exige glibc 2.43 e
+não abre no Ubuntu 22.04, no Debian 12 nem em quase nada. Foi o que aconteceu
+com a 1.4 no primeiro dia no Reddit. `./build-linux-compat.sh` compila dentro de
+um Ubuntu 20.04 pelo podman, exige só glibc 2.27, gera os `.ttl` do LV2 (passo
+separado no DPF; sem eles nenhum host acha o LV2) e sai em `../bin-compat`.
+
 ## Estrutura
 
 ```

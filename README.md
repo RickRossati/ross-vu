@@ -119,11 +119,17 @@ Prebuilt binaries are on the [releases page](../../releases).
 ### Linux
 
 ```
-tar xf ROSS-VU-1.4-linux-x86_64.tar.gz
+tar xf ROSS-VU-1.4.1-linux-x86_64.tar.gz
+cd ROSS-VU-1.4.1
+mkdir -p ~/.vst3 ~/.clap ~/.lv2
 cp -r ROSSVU.vst3 ~/.vst3/
 cp    ROSSVU.clap ~/.clap/
 cp -r ROSSVU.lv2  ~/.lv2/
 ```
+
+Needs glibc 2.27 or newer: Ubuntu 18.04, Debian 10, Fedora 28 and anything
+after. **Version 1.4 needed glibc 2.43** and failed to load on most distros with
+`GLIBC_2.43 not found`. 1.4.1 fixes that and changes nothing in the metering.
 
 In REAPER: Options > Preferences > Plug-ins > VST > Re-scan. CLAP in `~/.clap`
 is scanned along with it.
@@ -143,6 +149,12 @@ cd ross-vu
 
 Needs DPF next to this folder. Installs into `~/.vst3`, `~/.clap` and `~/.lv2`,
 and leaves the standalone at `../bin/ROSSVU`.
+
+A plain `make` links against the glibc of the machine you build on, so the
+binary only runs there or on something newer. Release builds for Linux use
+`./build-linux-compat.sh`, which compiles inside Ubuntu 20.04 with podman and
+generates the LV2 `.ttl` files (a separate step in DPF, easy to forget, and
+without them no host finds the LV2). Output in `../bin-compat`.
 
 `make windows` cross compiles with mingw-w64 and produces VST3 + CLAP in
 `../bin-win`. The binary is PE32+ x64 and depends on no mingw DLL, only on

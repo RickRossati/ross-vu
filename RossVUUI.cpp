@@ -459,19 +459,21 @@ private:
         const Color ink(28, 23, 17);
         const Color red(172, 36, 40);
 
-        // curva de base
+        // curva de base: a zona vermelha continua o MESMO arco da preta, so
+        // mais grossa. Antes ela ficava 7 px acima, num raio proprio, e um
+        // usuario no r/linuxaudio notou o degrau (16/09/2026).
         arcStroke(kRBase, vuToAngle(-24.0f), vuToAngle(0.0f), ink, 2.4f);
-        arcStroke(kRBase + 7.0f, vuToAngle(0.0f), vuToAngle(3.0f), red, 5.0f);
-
-        // degrau vermelho no zero
-        radial(vuToAngle(0.0f), kRBase - 1.0f, kRBase + 9.5f, red, 5.0f);
-        radial(vuToAngle(3.0f), kRBase + 4.0f, kRBase + 10.0f, red, 5.0f);
+        arcStroke(kRBase, vuToAngle(0.0f), vuToAngle(3.0f), red, 5.0f);
 
         static const float majors[] = { -20,-10,-7,-5,-3,-2,-1,0,1,2,3 };
         static const char* labels[] = { "-20","-10","-7","-5","-3","-2","-1","0","+1","+2","+3" };
-        static const float minors[] = { -15,-12,-9,-8,-6,-4,-3.5f,-2.5f,-1.5f,-0.5f,0.5f,1.5f,2.5f };
+        // Meio dB (-2.5, -1.5...) so existe de -3 para cima, onde os maiores
+        // andam de 1 em 1. O -3.5 era o unico meio dB abaixo disso, colado no
+        // -4, e deixava o trecho entre -5 e -3 com espacamento torto.
+        static const float minors[] = { -15,-12,-9,-8,-6,-4,-2.5f,-1.5f,-0.5f,0.5f,1.5f,2.5f };
+        const int nMinors = sizeof(minors) / sizeof(minors[0]);
 
-        for (int i = 0; i < 13; ++i)
+        for (int i = 0; i < nMinors; ++i)
         {
             const float v = minors[i];
             radial(vuToAngle(v), kRBase, kRMinor, v >= 0.0f ? red : ink, v >= 0.0f ? 2.6f : 1.8f);
