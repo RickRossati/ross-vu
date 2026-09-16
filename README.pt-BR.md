@@ -117,12 +117,20 @@ No VST3 os presets também aparecem no host como um parâmetro chamado
 
 ## Compilar e instalar
 
+O ROSS VU compila contra o DPF, que fica ao lado como pasta irmã. O DPF tem um
+submódulo próprio (pugl), então é o clone do DPF que precisa de `--recursive`,
+não este repositório (este aqui não tem submódulo).
+
 ```
-./instalar.sh
+git clone https://github.com/RickRossati/ross-vu
+git clone --recursive https://github.com/DISTRHO/DPF
+cd ross-vu
+make            # VST3 + CLAP + LV2 + standalone, em ../bin
+./instalar.sh   # ou este: compila e copia para ~/.vst3, ~/.clap, ~/.lv2
 ```
 
-Depende de `../DPF` estar ao lado desta pasta. Instala em `~/.vst3`, `~/.clap`
-e `~/.lv2`, e deixa o standalone em `../bin/ROSSVU`.
+Commit do DPF que funciona: `4238e1c` (set/2026). O ramo `develop` do DPF anda;
+se um commit posterior quebrar o build, use esse dentro do DPF.
 
 No REAPER, depois de instalar: Options > Preferences > Plug-ins > VST >
 Re-scan. O CLAP em `~/.clap` é varrido junto.

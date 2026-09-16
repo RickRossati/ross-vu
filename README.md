@@ -141,14 +141,20 @@ Unzip and drop `ROSSVU.vst3` and `ROSSVU.clap` into
 
 ### Build from source
 
+ROSS VU builds against DPF, which sits next to it as a sibling folder. DPF
+carries its own submodule (pugl), so it is the DPF clone that needs
+`--recursive`, not this repo (this repo has no submodules).
+
 ```
-git clone --recursive https://github.com/RickRossati/ross-vu
+git clone https://github.com/RickRossati/ross-vu
+git clone --recursive https://github.com/DISTRHO/DPF
 cd ross-vu
-./instalar.sh
+make            # VST3 + CLAP + LV2 + standalone, into ../bin
+./instalar.sh   # or this: builds, then copies into ~/.vst3, ~/.clap, ~/.lv2
 ```
 
-Needs DPF next to this folder. Installs into `~/.vst3`, `~/.clap` and `~/.lv2`,
-and leaves the standalone at `../bin/ROSSVU`.
+Known-good DPF commit: `4238e1c` (Sep 2026). DPF's `develop` branch moves; if a
+later commit breaks the build, check that one out inside DPF.
 
 A plain `make` links against the glibc of the machine you build on, so the
 binary only runs there or on something newer. Release builds for Linux use
