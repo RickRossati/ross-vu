@@ -3,7 +3,7 @@
 ; No Fedora:     sudo dnf install mingw64-nsis
 
 !define NOME    "ROSS VU"
-!define VERSAO  "1.4.1"
+!define VERSAO  "1.4.2"
 !define AUTOR   "Mister RickRoss"
 !define SITE    "https://misterrickross.com/plugins/ross-vu/"
 
@@ -16,7 +16,7 @@ RequestExecutionLevel admin
 InstallDir "$PROGRAMFILES64\Common Files\VST3"
 ShowInstDetails show
 
-VIProductVersion "1.4.1.0"
+VIProductVersion "1.4.2.0"
 VIAddVersionKey "ProductName"     "${NOME}"
 VIAddVersionKey "FileDescription" "Medidor VU analogico com balistica normativa"
 VIAddVersionKey "FileVersion"     "${VERSAO}"
@@ -43,6 +43,13 @@ Section "CLAP" SEC_CLAP
   File "..\..\bin-win\ROSSVU.clap"
 SectionEnd
 
+Section "Standalone (avulso, sem DAW)" SEC_STANDALONE
+  SetOutPath "$PROGRAMFILES64\${AUTOR}\${NOME}"
+  File "..\..\bin-win\ROSSVU.exe"
+  CreateDirectory "$SMPROGRAMS\${NOME}"
+  CreateShortcut "$SMPROGRAMS\${NOME}\${NOME}.lnk" "$PROGRAMFILES64\${AUTOR}\${NOME}\ROSSVU.exe"
+SectionEnd
+
 Section "-Desinstalador"
   SetOutPath "$PROGRAMFILES64\${AUTOR}\${NOME}"
   WriteUninstaller "$PROGRAMFILES64\${AUTOR}\${NOME}\Uninstall.exe"
@@ -65,6 +72,9 @@ Section "Uninstall"
   RMDir  "$PROGRAMFILES64\Common Files\VST3\ROSSVU.vst3\Contents"
   RMDir  "$PROGRAMFILES64\Common Files\VST3\ROSSVU.vst3"
   Delete "$PROGRAMFILES64\Common Files\CLAP\ROSSVU.clap"
+  Delete "$PROGRAMFILES64\${AUTOR}\${NOME}\ROSSVU.exe"
+  Delete "$SMPROGRAMS\${NOME}\${NOME}.lnk"
+  RMDir  "$SMPROGRAMS\${NOME}"
   Delete "$PROGRAMFILES64\${AUTOR}\${NOME}\Uninstall.exe"
   RMDir  "$PROGRAMFILES64\${AUTOR}\${NOME}"
   RMDir  "$PROGRAMFILES64\${AUTOR}"

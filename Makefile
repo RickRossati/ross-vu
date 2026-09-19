@@ -27,7 +27,7 @@ windows:
 	@rm -rf "$(WIN_STAGE)"
 	$(MAKE) CC=x86_64-w64-mingw32-gcc CXX=x86_64-w64-mingw32-g++ \
 	        AR=x86_64-w64-mingw32-ar BUILD_DIR_SUFFIX=-win \
-	        DPF_TARGET_DIR=$(WIN_STAGE) vst3 clap
+	        DPF_TARGET_DIR=$(WIN_STAGE) vst3 clap jack
 	@rm -rf "../bin-win" && mkdir -p "../bin-win"
 	@cp -r "$(WIN_STAGE)/." "../bin-win/"
 	@echo "Windows pronto em ../bin-win"

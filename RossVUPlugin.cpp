@@ -163,7 +163,7 @@ protected:
     const char* getMaker()   const override { return "Mister RickRoss"; }
     const char* getHomePage()const override { return "https://chaosarchitect.art"; }
     const char* getLicense() const override { return "GPL-3.0-or-later"; }
-    uint32_t    getVersion() const override { return d_version(1, 4, 1); }
+    uint32_t    getVersion() const override { return d_version(1, 4, 2); }
     int64_t     getUniqueId()const override { return d_cconst('M','R','V','U'); }
 
     void initAudioPort(bool input, uint32_t index, AudioPort& port) override
