@@ -10,6 +10,44 @@ single codebase. Built with [DPF](https://github.com/DISTRHO/DPF) and NanoVG.
 
 ---
 
+## Who built this, and why
+
+My name is Ricardo Rossati, better known as Mister RickRoss. I have been a
+bass player for 29 years, I live in Brazil. I produce, I record, I used to
+teach bass at School of Rock, I have played in bands, backing famous national
+artists. In my career I have had experience with radio, television, stage,
+touring, recording.
+
+And even having reached that level, here in Brazil I feel music is a path for
+few, and that musicians do not get the space they deserve. I used to use
+Studio One on Windows, and it was always all paid. At the music school where
+I taught, the owner decided to install Linux. My history with technology goes
+back to Windows 3.11, where I used to install Doom.
+
+Windows never offered me the practicality that Linux offered. And when I got
+to Linux, I missed several native plugins, and I did not want to keep
+installing or cracking plugins. With the knowledge I built up through AI, I
+started coding, it has been 3, 4 years of coding now, and now with Claude
+some things got a lot easier.
+
+Besides ROSS VU I have Substance, in continuous production progress, I have
+an app called BandMate, and I was the first Brazilian to release a music
+video made with artificial intelligence. You can check all of that at
+[misterrickross.com](https://misterrickross.com).
+
+The idea for this plugin came, and yes, Claude helped me code it. The needle
+model and the tests that prove the numbers are mine, Claude helped me with
+the code around them. All the prototyping was done with a lot of care, the
+calculations are all on the site. I am inviting everyone to use the plugin
+and also to contribute to this new model, this new era, where each person
+can contribute from home, without spending too much time and energy.
+
+*Mister RickRoss / Ricardo Rossati*
+*[misterrickross.com](https://misterrickross.com)*
+
+---
+
+
 ## What it actually does
 
 This is not a decorative pointer animated by RMS. The movement is a real

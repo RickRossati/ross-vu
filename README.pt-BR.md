@@ -6,6 +6,44 @@ Feito com DPF (DISTRHO Plugin Framework) + NanoVG.
 
 ---
 
+## Quem fez isso, e por quê
+
+Meu nome é Ricardo Rossati, mais conhecido como Mister RickRoss. Sou baixista há
+29 anos, moro no Brasil. Produzo, gravo, já fui professor de contrabaixo na
+School of Rock, já toquei em bandas, acompanhando artistas nacionais famosos.
+Na minha carreira tive experiências com rádio, televisão, palco, viagens,
+gravações.
+
+E mesmo tendo atingido esse nível, aqui no Brasil eu sinto que a música é um
+caminho pra poucos, e que os músicos não têm o espaço que merecem. Eu usava
+Studio One no Windows, e era sempre tudo pago. Na escola de música onde eu
+dava aula, o dono resolveu instalar Linux. Minha história com tecnologia vem
+desde o Windows 3.11, onde eu instalava o Doom.
+
+O Windows nunca me ofereceu a praticidade que o Linux oferecia. E quando
+cheguei no Linux, senti falta de diversos plugins nativos, e eu não queria
+ficar instalando ou craqueando plugin. Com o conhecimento que eu fui tendo
+através de IA, comecei a codificar, já são 3, 4 anos codificando, e agora com
+o Claude algumas coisas ficaram bem mais fáceis.
+
+Além do ROSS VU eu tenho o Substance, em contínuo progresso de produção, tenho
+um aplicativo chamado BandMate, e fui o primeiro brasileiro a lançar um clipe
+com inteligência artificial. Você pode conferir tudo isso em
+[misterrickross.com](https://misterrickross.com).
+
+A ideia desse plugin veio, e sim, o Claude me ajudou a codificá-lo. O modelo
+da agulha e os testes que provam os números são meus, o Claude me ajudou com
+o código ao redor. Toda a prototipagem foi feita com muito carinho, os
+cálculos estão todos no site. Estou convidando todo mundo pra usar o plugin e
+também contribuir pra esse novo modelo, essa nova era, onde cada pessoa pode
+contribuir de dentro de casa, sem gastar muito tempo e energia.
+
+*Mister RickRoss / Ricardo Rossati*
+*[misterrickross.com](https://misterrickross.com)*
+
+---
+
+
 ## O que ele faz de verdade
 
 Não é um ponteiro decorativo animado por RMS. O movimento é um sistema de segunda
