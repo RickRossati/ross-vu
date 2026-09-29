@@ -239,3 +239,6 @@ Not talk. The tests live in `tests/`, and `tests/rodar.sh` runs all three:
 GPL-3.0-or-later. DPF is ISC. Liberation Sans is OFL.
 
 Built by [Mister RickRoss](https://misterrickross.com), 2026.
+
+Also from Ross Audio: [SUBSTANCE](https://misterrickross.com/substance/en/?utm_source=github-rickrossati&utm_medium=api&utm_campaign=substance-piloto&utm_term=a736&utm_content=a736), a bass processor for Windows and
+Linux (VST3 and standalone) with a free tier.
